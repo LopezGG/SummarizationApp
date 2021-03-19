@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-import torch
-#from model import predictT5
+
+from model import predictT5
 
 app = FastAPI()
 

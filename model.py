@@ -1,12 +1,12 @@
-#backend/main
+
 import torch
 import json 
 from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
 #from pathlib import Path
 #BASE_DIR = Path(__file__).resolve(strict=True).parent
 
-model = T5ForConditionalGeneration.from_pretrained('t5-large')
-tokenizer = T5Tokenizer.from_pretrained('t5-large')
+model = T5ForConditionalGeneration.from_pretrained('t5-small')
+tokenizer = T5Tokenizer.from_pretrained('t5-small')
 device = torch.device('cpu')
 
 def predictT5(text: str, minLen: int = 5,maxLen: int = 100):
