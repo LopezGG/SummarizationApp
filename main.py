@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-from model import predictT5
+#from model import predictT5
 
 app = FastAPI()
 
