@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'gilopezESumm'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_974ff53a0ba946c884c9e01e0459a616 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_73cb1715a50c47359d35312fa4913cca }}
