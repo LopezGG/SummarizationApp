@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from model import predictT5
+#from model import predictT5
 
 testApp = FastAPI() # create an app
 
@@ -22,7 +22,7 @@ class TextOut(BaseModel):
     # routes
 def root():
     return {"message":"Jesus please help me. O Lord I need you"}
-
+'''
 @testApp.post("/predict", response_model=TextOut, status_code=200)
 def get_prediction(payload: TextIn):
     """
@@ -38,7 +38,7 @@ def get_prediction(payload: TextIn):
     summary = dict()
     summary['t5'] = t5Summary
     response_object = {"Summary": summary}
-    return response_object
+    return response_object'''
 
 """
 activate learning
