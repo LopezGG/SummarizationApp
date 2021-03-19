@@ -26,25 +26,10 @@ jobs:
       with:
         platform: python
         platform-version: '3.8'
-        
-    - name: Install Custom Dependencies(fastapi)
-      run: pip install fastapi
-      
-    - name: Install Custom Dependencies(uvloop)
-      run: pip install uvloop
-      
-    - name: Install Custom Dependencies(httptools)
-      run: pip install httptools
-      
-    - name: Install Custom Dependencies(uvicorn)
-      run: pip install uvicorn
-      
-    - name: Install Custom Dependencies(transformers)
-      run: pip install transformers[torch]
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'gilopezESumm'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_73cb1715a50c47359d35312fa4913cca }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7d01f42fea9b46b9a3ca043ba3036867 }}
