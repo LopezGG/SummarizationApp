@@ -1,24 +1,12 @@
+from fastapi import FastAPI, Request
 
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-#from model import predictT5
-
-testApp = FastAPI() # create an app
-
-@testApp.get("/") # set root directory
-
-# pydantic models
+app = FastAPI()
 
 
-class TextIn(BaseModel):
-    text: str
-    minLen: int
-    maxLen: int
+@app.get("/")
+async def root():
+    return {"message": "Jesus Mary Joseph, I love you save all souls"}
 
-class TextOut(BaseModel):
-    Summary: dict # this should not have () after dict
-
-    # routes
-def root():
-    return {"message":"Jesus please help me. O Lord I need you"}
+@app.get("/get")
+async def get_name(name:str):
+    return {"name": name}
