@@ -3,3 +3,4 @@ uvicorn
 uvloop
 httptools
 transformers[torch]
+sentencepiece
