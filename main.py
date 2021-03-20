@@ -1,12 +1,8 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 
-#from model import predictT5
-import torch
-import json 
-from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
+from model import predictT5
 
-model = T5ForConditionalGeneration.from_pretrained('t5-base')
 app = FastAPI()
 
 
